@@ -1,62 +1,41 @@
-// you can overwrite this entire file with your v0 Component.
-// just copy and paste the "React" output over the entire file.
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/81qXDUvPnGf
+ */
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
-import Link from "next/link";
-import React from "react";
-import {V0Logo} from "./symbols";
-
-function TestComponent() {
+export default function Component() {
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100%",
-        justifyContent: "space-between",
-        flexDirection: "column",
-        width: "100%",
-      }}
-    >
-      <h3
-        style={{
-          maxWidth: "11em",
-        }}
-      >
-        This would be a pretty good place for a{" "}
-        <Link href="https://v0.dev/" target="_blank" rel="noopener noreferrer">
-          v0 component
-        </Link>
-        , wouldn't it?
-      </h3>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-end",
-          width: "100%",
-        }}
-      >
-        <p
-          style={{
-            maxWidth: "20em",
-          }}
-        >
-          Go make one, then paste it into{" "}
-          <code
-            style={{
-              fontFamily: "var(--font-geist-mono)",
-              fontWeight: 500,
-              fontSize: "0.95em",
-              fontFeatureSettings: "'ss09'",
-            }}
-          >
-            app/components/MyV0Component.tsx
-          </code>
-        </p>
-
-        <V0Logo />
+    <section className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center space-y-4 text-center">
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              Subscribe to our Newsletter
+            </h1>
+            <p className="mx-auto max-w-[700px] text-zinc-500 md:text-xl dark:text-zinc-400">
+              Stay updated with our latest news and promotions. Enter your email below.
+            </p>
+          </div>
+          <div className="w-full max-w-sm space-y-2">
+            <form className="flex space-x-2">
+              <Input className="max-w-lg flex-1" placeholder="Enter your email" type="email" />
+              <Button className="bg-blue-500 hover:bg-blue-700 text-white animate-bounce" type="submit">
+                Subscribe
+              </Button>
+            </form>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400">
+              We respect your privacy. By subscribing, you agree to our terms and conditions.
+            </p>
+          </div>
+          <div className="bg-green-500 dark:bg-green-400 text-white rounded-lg p-4 max-w-lg">
+            <h2 className="text-xl font-bold">Success!</h2>
+            <p className="text-sm">You have successfully subscribed to our newsletter.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    </section>
+  )
 }
 
-export default TestComponent;
